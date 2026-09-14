@@ -247,6 +247,28 @@ This framework is designed for tasks such as:
 
 If your use case involves structured reasoning, scientific models, or physics-based tasks, this framework provides the flexibility and precision you need.
 
+## Candidate future roles in the ecosystem (not built, tracked elsewhere)
+
+Two ideas brought into `PINNeAPPle/ROADMAP.md` on 2026-09-13 name this
+repo as a candidate substrate rather than duplicating agent-orchestration
+code of their own:
+
+- **AGI Evaluation Engine** (`PINNeAPPle/ROADMAP.md` §8) — a no-LLM
+  intelligence-benchmark harness where the thing being *evaluated* can be
+  any pluggable agent, including one built on this framework's
+  `Agent`/`Task`/`Orchestrator` primitives. This repo would supply
+  candidate agents, never the evaluator itself — the evaluator is
+  deliberately LLM-free by design (see that section for why).
+- **Open-source CAD self-correction harness** (`PINNeAPPle/ROADMAP.md`
+  §2) — the decompose → generate-script → sandbox-execute → correct
+  loop described there is exactly the kind of multi-step agent flow this
+  framework's `Orchestrator`/`Flow` primitives already model; worth
+  evaluating before hand-rolling a bespoke loop in `pinneapple_llm` if
+  that project moves forward.
+
+Neither is started; both are single-line entries in this repo until
+work actually begins.
+
 ## Contribution Guidelines
 
 We welcome contributions! To contribute:
